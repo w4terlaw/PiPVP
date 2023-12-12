@@ -13,13 +13,13 @@ const App = () => {
     return (
         <BrowserRouter>
             <nav>
-                <NavLink to="/" exact activeClassName="active">Home</NavLink>
+                <NavLink to="/" activeClassName="active">Home</NavLink>
                 <NavLink to="/blogs" activeClassName="active">Blogs</NavLink>
                 <NavLink to="/contact" activeClassName="active">Contact</NavLink>
             </nav>
             <Layout>
                 <Routes>
-                    <Route path="/" exact element={<Home/>}/>
+                    <Route path="" element={<Home/>}/>
                     <Route path="/blogs" element={<Blogs/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="*" element={<NoPage/>}/>
