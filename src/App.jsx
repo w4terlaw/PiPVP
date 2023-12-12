@@ -19,7 +19,7 @@ const App = () => {
             </nav>
             <Layout>
                 <Routes>
-                    <Route path="" element={<Home/>}/>
+                    <Route path="/" element={<Home/>}/>
                     <Route path="/blogs" element={<Blogs/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="*" element={<NoPage/>}/>
