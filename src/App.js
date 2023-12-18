@@ -1,17 +1,13 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import UserList from "./pages/UserList";
-import UserDetails from "./pages/UserDetails";
-
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<UserList />} />
-        <Route path="/users/:userId" element={<UserDetails />} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
-
-export default App;
+import React, { useState } from "react";
+import { Context } from "./Context.js";
+import ComponentA from "./ComponentA";
+import ComponentB from "./ComponentB";
+export default function App() {
+    const [context, setContext] = useState("default context value");
+    return (
+        <Context.Provider value={[context, setContext]}>
+            <ComponentA />
+            <ComponentB />
+        </Context.Provider>
+    );
+}
